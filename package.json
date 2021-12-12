@@ -1,6 +1,6 @@
 {
   "name": "kanri-frontend",
-  "homepage": "https://darkaster72.github.io/kanri-frontend",
+  "homepage": "https://iankit.me/kanri",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
