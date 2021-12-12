@@ -1,6 +1,6 @@
 {
   "name": "kanri-frontend",
-  "homepage": "https://iankit.me/kanri",
+  "homepage": "https://iankit.me/kanri-ui",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
