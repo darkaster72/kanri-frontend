@@ -7,7 +7,7 @@
     "start": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "test": "jest --watchAll",
+    "test": "jest",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build"
   },
