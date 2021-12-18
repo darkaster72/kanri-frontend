@@ -9,7 +9,7 @@ const Header = ({}: AppProps) => (
     <div className="w-full flex justify-between px-10 py-3 align-baseline">
       <div className="flex items-center">
         <div className="bg-secondary rounded-md px-2 items-center">
-          <h1 className="text-2xl font-bold text-primary-light">K</h1>
+          <h1 className="text-4xl font-thin text-primary-light">K</h1>
         </div>
         <Link to="/">
           <h3 className="text-4xl px-3 py-2 font-bold text-primary-dark">Kanri</h3>

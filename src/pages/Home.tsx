@@ -1,5 +1,6 @@
 import Button from "../components/Button";
 import Header from "../components/Header";
+import TextField from "../components/TextField";
 
 const Home = () => (
   <div className="h-full w-fullbg-primary-light">
@@ -15,12 +16,8 @@ const Home = () => (
           high rises to the home office, the way your team works is
           unique—accomplish it all with Trello.
         </p>
-        <div className="flex mt-8">
-          <input
-            type="text"
-            placeholder="Email"
-            className="rounded-md basis-4/6 mr-4 px-4 shadow-sm focus:outline-none focus:ring-2 ring-1 ring-gray-200 focus:ring-secondary"
-          />
+        <div className="flex mt-8 gap-4">
+          <TextField placeholder="Email" classes="basis-4/6"></TextField>
           <Button classes="basis-2/6">Sign Up</Button>
         </div>
       </div>
