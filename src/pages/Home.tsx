@@ -8,7 +8,7 @@ const Home = () => (
     {/* Hero Section */}
     <div className="container flex pt-24 mx-auto px-6 items-center">
       <div className="mx-10 w-full">
-        <h3 className="font-bold text-5xl text-secondary leading-tight">
+        <h3 className="font-bold text-5xl text-primary-dark leading-tight">
           Kanri helps teams move work forward.
         </h3>
         <p className="mt-2 text-lg font-thin text-primary-dark">
