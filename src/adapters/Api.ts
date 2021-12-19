@@ -9,6 +9,7 @@ export default class Api {
     const [successHandler, errorHandler] = this.responseInteceptor();
     this.http.interceptors.response.use(successHandler, errorHandler);
   }
+
   requestInterceptor = (config: AxiosRequestConfig) => {
     // attach token
     return config;
