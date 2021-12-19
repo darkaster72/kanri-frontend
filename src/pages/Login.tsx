@@ -16,14 +16,14 @@ const Login = () => (
     </div>
     <div className="container mx-auto flex justify-center">
       <div className="w-auto bg-white place-content-center rounded-md shadow-lg flex flex-col px-10 py-10 gap-4 items-center">
-        <h1 className="text-xl">Login to Kanri</h1>
+        <h1 className="text-xl text-primary-dark/60">Login to Kanri</h1>
         <TextField placeholder="Email" type="email" classes="" />
         <TextField placeholder="Password" type="password" classes="" />
         <Button classes="">Login</Button>
         <div className="uppercase font-thin">Or</div>
         <Button classes="">Login with Google</Button>
         <hr className="w-full my-2" />
-        <div className="flex justify-around gap-2">
+        <div className="flex justify-around gap-2 font-thin tracking-tighter text-accent-dark">
           <Link to="/">
             <p className="hover:underline">Can't log in?</p>
           </Link>

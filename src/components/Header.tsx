@@ -15,7 +15,7 @@ const Header = ({}: AppProps) => (
           <h3 className="text-4xl px-3 py-2 font-bold text-primary-dark">Kanri</h3>
         </Link>
       </div>
-      <div className="flex no-underline items-center">
+      <div className="flex no-underline items-center gap-2">
         <Link to="login">
           <TextButton>Login</TextButton>
         </Link>

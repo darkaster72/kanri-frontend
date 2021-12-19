@@ -16,14 +16,14 @@ const Signup = () => (
     </div>
     <div className="container mx-auto flex justify-center">
       <div className="w-auto bg-white place-content-center rounded-md shadow-lg flex flex-col px-10 py-10 gap-4 items-center">
-        <h1 className="text-xl">Sign-up for your account</h1>
+        <h1 className="text-xl text-primary-dark/60">Sign-up for your account</h1>
         <TextField placeholder="Email" type="email" classes="" />
         <Button classes="">Sign-up</Button>
         <div className="uppercase font-thin">Or</div>
         <Button classes="">Continue with Google</Button>
         <hr className="w-full my-2" />
         <Link to="/login">
-          <p className="hover:underline">Already have an account? Login</p>
+          <p className="hover:underline font-thin text-accent-dark">Already have an account? Login</p>
         </Link>
       </div>
     </div>
