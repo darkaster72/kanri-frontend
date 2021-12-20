@@ -1,5 +1,5 @@
+import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-import Button from "./Button";
 import TextButton from "./TextButton";
 
 type AppProps = {};
@@ -12,15 +12,17 @@ const Header = ({}: AppProps) => (
           <h1 className="text-4xl font-thin text-primary-light">K</h1>
         </div>
         <Link to="/">
-          <h3 className="text-4xl px-3 py-2 font-bold text-primary-dark">Kanri</h3>
+          <h3 className="text-4xl px-3 py-2 font-bold text-primary-dark">
+            Kanri
+          </h3>
         </Link>
       </div>
       <div className="flex no-underline items-center gap-2">
         <Link to="login">
-          <TextButton>Login</TextButton>
+          <Button>Login</Button>
         </Link>
         <Link to="sign-up">
-          <Button> Sign Up</Button>
+          <Button variant="contained"> Sign Up</Button>
         </Link>
       </div>
     </div>

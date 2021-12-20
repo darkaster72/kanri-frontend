@@ -1,4 +1,6 @@
-module.exports = {
+// import tailwindFilter from "tailwindcss-filters";
+
+export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -28,5 +30,5 @@ module.exports = {
       serif: ["Merriweather", "serif"],
     },
   },
-  plugins: [require("tailwindcss-filters")],
+  plugins: [],
 };
