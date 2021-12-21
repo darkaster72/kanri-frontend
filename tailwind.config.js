@@ -1,5 +1,3 @@
-// import tailwindFilter from "tailwindcss-filters";
-
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -9,20 +7,23 @@ export default {
         blur: "blur(20px)",
       },
       colors: {
+        background: '#ffffff',
+        black: '#000000',
+        white: '#ffffff',
         primary: {
-          light: "#ffffff",
-          dark: "#000000",
+          light: "#2D71FA",
+          DEFAULT: "#1560fb",
+          dark: "#0049DE",
         },
         secondary: {
           light: "#2D71FA",
           DEFAULT: "#1560fb",
           dark: "#0049DE",
         },
-        accent: {
-          light: "#2D71FA",
-          DEFAULT: "#1560fb",
-          dark: "#0049DE",
-        },
+        error: '#f44336',
+        warning: '#ffa726',
+        success: '#66bb6a',
+        info: '#29b6f6'
       },
     },
     fontFamily: {
