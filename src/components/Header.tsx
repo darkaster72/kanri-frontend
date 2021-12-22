@@ -18,7 +18,7 @@ const Header = ({}: AppProps) => (
           <Button>Login</Button>
         </Link>
         <Link to="sign-up">
-          <Button variant="contained"> Sign Up</Button>
+          <Button variant="outlined"> Sign Up</Button>
         </Link>
       </div>
     </div>

@@ -2,6 +2,17 @@ import { createTheme } from "@mui/material/styles";
 import TailwindConfig from "../../tailwind.config";
 
 export const MaterialTheme = createTheme({
+  shape: { borderRadius: 8 },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'capitalize',
+          fontSize: '1rem'
+        }
+      }
+    }
+  },
   palette: {
     primary: {
       main: TailwindConfig.theme.extend.colors.secondary.DEFAULT,

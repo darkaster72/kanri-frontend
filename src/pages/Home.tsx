@@ -1,6 +1,5 @@
-import { Button } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 import Header from "../components/Header";
-import TextField from "../components/TextField";
 
 const Home = () => (
   <div className="h-full w-full bg-background">
@@ -17,8 +16,10 @@ const Home = () => (
           unique—accomplish it all with Kanri.
         </p>
         <div className="flex mt-8 gap-4">
-          <TextField placeholder="Email" classes="basis-4/6"></TextField>
-          <Button variant="contained" className="basis-2/6">Sign Up</Button>
+          <TextField placeholder="Email" className="basis-4/6"></TextField>
+          <Button variant="contained" className="basis-2/6">
+            Sign Up
+          </Button>
         </div>
       </div>
       <div className="basis-4/6">
