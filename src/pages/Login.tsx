@@ -1,33 +1,26 @@
 import { Button, Link, TextField } from "@mui/material";
 import { useFormik } from "formik";
 import { Link as RouterLink } from "react-router-dom";
+import * as yup from "yup";
 import Logo from "../components/Logo";
-import { EMAIL_REGEX } from "../utils/constants";
 
 type FormValues = { email: string; password: string };
 
+const validationSchema = yup.object({
+  email: yup.string().email("Invalid email").required("Required"),
+  password: yup.string().required("Required"),
+});
+
 const onSubmit = (values: FormValues) => {
   console.log(values);
-};
-const validate = ({ email, password }: FormValues): Partial<FormValues> => {
-  const errors: Partial<FormValues> = {};
-  if (!email) {
-    errors.email = "Please enter email";
-  } else if (!EMAIL_REGEX.test(email)) {
-    errors.email = "Incorrect format for email";
-  }
-
-  if (!password) {
-    errors.password = "Please enter password";
-  }
-  return errors;
 };
 
 const Login = () => {
   const form = useFormik({
     initialValues: { email: "", password: "" },
     onSubmit,
-    validate,
+    validationSchema,
+    validateOnBlur: true,
   });
 
   return (
@@ -49,7 +42,7 @@ const Login = () => {
               className="w-full"
               error={form.touched.email && !!form.errors.email}
               helperText={form.touched.email && form.errors.email}
-              {...form.getFieldProps('email')}
+              {...form.getFieldProps("email")}
             />
             <TextField
               placeholder="Password"
@@ -58,7 +51,7 @@ const Login = () => {
               className="w-full"
               error={form.touched.password && !!form.errors.password}
               helperText={form.touched.password && form.errors.password}
-              {...form.getFieldProps('password')}
+              {...form.getFieldProps("password")}
             />
             <Button variant="contained" type="submit">
               Login
