@@ -33,7 +33,7 @@ const Login = () => {
         >
           {(formik) => (
             <form onSubmit={formik.handleSubmit}>
-              <div className="w-auto bg-white place-content-center rounded-md shadow-lg flex flex-col px-10 py-10 gap-3 items-center">
+              <div className="w-auto bg-white place-content-center rounded-md shadow-lg flex flex-col px-12 py-10 gap-3 items-center">
                 <h1 className="text-xl text-black/60">Login to Kanri</h1>
                 <TextField
                   placeholder="Email"
@@ -53,11 +53,11 @@ const Login = () => {
                   helperText={formik.touched.password && formik.errors.password}
                   {...formik.getFieldProps("password")}
                 />
-                <Button variant="contained" type="submit">
+                <Button variant="contained" type="submit" fullWidth>
                   Login
                 </Button>
                 <div className="uppercase font-thin">Or</div>
-                <Button variant="contained">Login with Google</Button>
+                <Button variant="outlined" fullWidth>Login with Google</Button>
                 <hr className="w-full my-2" />
                 <div className="flex justify-around gap-2 font-thin tracking-tighter text-accent-dark">
                   <Link
