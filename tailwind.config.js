@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -7,20 +7,24 @@ module.exports = {
         blur: "blur(20px)",
       },
       colors: {
+        background: '#ffffff',
+        black: '#000000',
+        white: '#ffffff',
         primary: {
-          light: "#ffffff",
-          dark: "#000000",
+          light: "#2D71FA",
+          DEFAULT: "#1560fb",
+          dark: "#0049DE",
         },
         secondary: {
-          light: "#2D71FA",
-          DEFAULT: "#1560fb",
-          dark: "#0049DE",
+          light: "#fcd34d",
+          DEFAULT: "#f59e0b",
+          dark: "#d97706",
+          contrast: '#78350f'
         },
-        accent: {
-          light: "#2D71FA",
-          DEFAULT: "#1560fb",
-          dark: "#0049DE",
-        },
+        error: '#f44336',
+        warning: '#ffa726',
+        success: '#66bb6a',
+        info: '#29b6f6'
       },
     },
     fontFamily: {
@@ -28,5 +32,5 @@ module.exports = {
       serif: ["Merriweather", "serif"],
     },
   },
-  plugins: [require("tailwindcss-filters")],
+  plugins: [],
 };
