@@ -6,7 +6,7 @@ type AppProps = {};
 
 const Header = ({}: AppProps) => (
   <nav className="fixed w-full">
-    <div className="w-full flex justify-between px-10 py-3 align-baseline">
+    <div className="container mx-auto flex justify-between px-10 py-3 align-baseline">
       <div className="flex items-center">
         <Logo></Logo>
         <Link to="/">

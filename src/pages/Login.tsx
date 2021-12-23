@@ -33,7 +33,7 @@ const Login = () => {
         >
           {(formik) => (
             <form onSubmit={formik.handleSubmit}>
-              <div className="w-auto bg-white place-content-center rounded-md shadow-lg flex flex-col px-10 py-10 gap-4 items-center">
+              <div className="w-auto bg-white place-content-center rounded-md shadow-lg flex flex-col px-10 py-10 gap-3 items-center">
                 <h1 className="text-xl text-black/60">Login to Kanri</h1>
                 <TextField
                   placeholder="Email"

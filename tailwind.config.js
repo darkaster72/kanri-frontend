@@ -16,9 +16,10 @@ export default {
           dark: "#0049DE",
         },
         secondary: {
-          light: "#2D71FA",
-          DEFAULT: "#1560fb",
-          dark: "#0049DE",
+          light: "#fcd34d",
+          DEFAULT: "#f59e0b",
+          dark: "#d97706",
+          contrast: '#78350f'
         },
         error: '#f44336',
         warning: '#ffa726',

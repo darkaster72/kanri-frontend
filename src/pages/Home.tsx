@@ -17,7 +17,7 @@ const Home = () => (
         </p>
         <div className="flex mt-8 gap-4">
           <TextField placeholder="Email" className="basis-4/6"></TextField>
-          <Button variant="contained" className="basis-2/6">
+          <Button variant="contained" className="basis-2/6" color="secondary">
             Sign Up
           </Button>
         </div>

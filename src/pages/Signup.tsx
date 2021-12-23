@@ -12,12 +12,12 @@ const Signup = () => (
       </Link>
     </div>
     <div className="container mx-auto flex justify-center">
-      <div className="w-auto bg-white place-content-center rounded-md shadow-lg flex flex-col px-10 py-10 gap-4 items-center">
+      <div className="w-auto bg-white place-content-center rounded-md shadow-lg flex flex-col px-10 py-10 gap-6 items-center">
         <h1 className="text-xl text-black/60">Sign-up for your account</h1>
         <TextField placeholder="Email" type="email" />
         <Button variant="contained" >Sign-up</Button>
         <div className="uppercase font-thin">Or</div>
-        <Button variant="contained">Continue with Google</Button>
+        <Button variant="outlined">Continue with Google</Button>
         <hr className="w-full my-2" />
         <Link to="/login" component={RouterLink} underline="hover" color="black">
           <p className="hover:underline font-thin text-accent-dark">
