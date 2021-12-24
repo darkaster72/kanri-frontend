@@ -3,6 +3,8 @@ import { Formik } from "formik";
 import { Link as RouterLink } from "react-router-dom";
 import Logo from "../components/Logo";
 import * as yup from "yup";
+import { login } from "../redux/reducers/userSlice";
+import { useAppDispatch } from "../redux/store";
 
 type FormValues = { email: string; password: string };
 
@@ -11,11 +13,13 @@ const validationSchema = yup.object({
   password: yup.string().required("Required"),
 });
 
-const onSubmit = (values: FormValues) => {
-  console.log(values);
-};
-
 const Login = () => {
+  const dispatch = useAppDispatch();
+
+  const onSubmit = (values: FormValues) => {
+    dispatch(login(values));
+  };
+
   return (
     <div className="h-screen w-full bg-white flex flex-col justify-center items-center">
       <div className="flex items-center">
