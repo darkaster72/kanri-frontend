@@ -1,22 +1,52 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import {
+  createAsyncThunk,
+  createSlice,
+  PayloadAction
+} from "@reduxjs/toolkit";
 import { IUser } from "../../modes/user";
 
-const initialState: { currentUser: IUser | null } = {
-  currentUser: null,
+type UserState = {
+  currentUser: IUser | null;
+  error: Error | null;
 };
+
+const initialState: UserState = {
+  currentUser: null,
+  error: null,
+};
+
+export const loginUser = createAsyncThunk(
+  "user/login",
+  async (user: { email: string; password: string }, thunkApi) => {
+    const response = await new Promise<IUser>((resolve) => {
+      setTimeout(() => resolve({ email: user.email }), 100);
+    });
+    // thunkApi.
+    return response;
+  }
+);
 
 const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    login: (state, action: PayloadAction<IUser>) => ({
-      ...state,
-      currentUser: action.payload,
-    }),
-    logout: (state) => ({
-      ...state,
-      currentUser: null,
-    }),
+    loginSuccess: (state, action: PayloadAction<IUser>) => {
+      state.currentUser = action.payload;
+    },
+    loginError: (state, action: PayloadAction<Error>) => {
+      state.error = action.payload;
+    },
+    login: (state, action: PayloadAction<IUser>) => {
+      state.currentUser = action.payload;
+    },
+    logout: (state) => {
+      state.currentUser = null;
+    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(loginUser.fulfilled, (state, action) => {
+      state.currentUser = action.payload;
+    });
   },
 });
 
