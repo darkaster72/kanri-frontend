@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -7,9 +7,9 @@ export default {
         blur: "blur(20px)",
       },
       colors: {
-        background: '#ffffff',
-        black: '#000000',
-        white: '#ffffff',
+        background: "#ffffff",
+        black: "#000000",
+        white: "#ffffff",
         primary: {
           light: "#2D71FA",
           DEFAULT: "#1560fb",
@@ -19,12 +19,12 @@ export default {
           light: "#fcd34d",
           DEFAULT: "#f59e0b",
           dark: "#d97706",
-          contrast: '#78350f'
+          contrast: "#78350f",
         },
-        error: '#f44336',
-        warning: '#ffa726',
-        success: '#66bb6a',
-        info: '#29b6f6'
+        error: "#f44336",
+        warning: "#ffa726",
+        success: "#66bb6a",
+        info: "#29b6f6",
       },
     },
     fontFamily: {

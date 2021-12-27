@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material/styles";
-import TailwindConfig from "../../tailwind.config";
+import { colors } from "../styles/variables";
 
 export const MaterialTheme = createTheme({
   shape: { borderRadius: 8 },
@@ -15,28 +15,28 @@ export const MaterialTheme = createTheme({
   },
   palette: {
     primary: {
-      main: TailwindConfig.theme.extend.colors.primary.DEFAULT,
+      main: colors.primary.DEFAULT,
     },
     secondary: {
-      light: TailwindConfig.theme.extend.colors.secondary.light,
-      main: TailwindConfig.theme.extend.colors.secondary.DEFAULT,
-      dark: TailwindConfig.theme.extend.colors.secondary.dark,
-      contrastText: TailwindConfig.theme.extend.colors.secondary.contrast,
+      light: colors.secondary.light,
+      main: colors.secondary.DEFAULT,
+      dark: colors.secondary.dark,
+      contrastText: colors.secondary.contrast,
     },
     background: {
-      default: TailwindConfig.theme.extend.colors.background,
+      default: colors.background,
     },
     error: {
-      main: TailwindConfig.theme.extend.colors.error,
+      main: colors.error,
     },
     success: {
-      main: TailwindConfig.theme.extend.colors.success,
+      main: colors.success,
     },
     info: {
-      main: TailwindConfig.theme.extend.colors.info,
+      main: colors.info,
     },
     warning: {
-      main: TailwindConfig.theme.extend.colors.warning,
+      main: colors.warning,
     },
   },
 });
