@@ -1,7 +1,9 @@
 import { Button, Link, TextField } from "@mui/material";
+import Logo from "components/logo/Logo";
 import { Formik } from "formik";
-import { Link as RouterLink } from "react-router-dom";
-import Logo from "../components/Logo";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
+import { loginUser } from "reducers/user/userSlice";
+import { useAppDispatch } from "redux/store";
 import * as yup from "yup";
 
 type FormValues = { email: string; password: string };
@@ -11,11 +13,16 @@ const validationSchema = yup.object({
   password: yup.string().required("Required"),
 });
 
-const onSubmit = (values: FormValues) => {
-  console.log(values);
-};
-
 const Login = () => {
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
+  const onSubmit = (values: FormValues) => {
+    dispatch(loginUser(values))
+      .unwrap()
+      .then(() => navigate("/"));
+  };
+
   return (
     <div className="h-screen w-full bg-white flex flex-col justify-center items-center">
       <div className="flex items-center">

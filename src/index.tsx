@@ -1,28 +1,35 @@
 import { ThemeProvider } from "@mui/material";
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Provider } from "react-redux";
+import {
+  BrowserRouter as Router, Route,
+  Routes
+} from "react-router-dom";
 import App from "./App";
 import "./index.css";
 import ErrorBoundary from "./pages/ErrorBoundary";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
+import Home from "./pages/home/Home";
+import Login from "./pages/login/Login";
+import Signup from "./pages/signup/Signup";
+import store from "./redux/store";
 import { MaterialTheme } from "./styles/MaterialTheme";
 
 ReactDOM.render(
   <React.StrictMode>
     <ErrorBoundary>
       <ThemeProvider theme={MaterialTheme}>
-        <Router basename="/kanri-ui">
-          <Routes>
-            <Route path="/" element={<App />}>
-              <Route path="login" element={<Login />} />
-              <Route path="sign-up" element={<Signup />} />
-              <Route path="" element={<Home />} />
-            </Route>
-          </Routes>
-        </Router>
+        <Provider store={store}>
+          <Router basename="/kanri-ui">
+            <Routes>
+              <Route path="/" element={<App />}>
+                <Route path="login" element={<Login />} />
+                <Route path="sign-up" element={<Signup />} />
+                <Route path="" element={<Home />} />
+              </Route>
+            </Routes>
+          </Router>
+        </Provider>
       </ThemeProvider>
     </ErrorBoundary>
   </React.StrictMode>,

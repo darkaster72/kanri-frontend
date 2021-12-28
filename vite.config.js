@@ -1,7 +1,7 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
 import svgr from "@honkhonk/vite-plugin-svgr";
-import postcss from "./postcss.config";
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 /**
  * @type {import('vite').UserConfig}
@@ -9,8 +9,5 @@ import postcss from "./postcss.config";
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "/kanri-ui/", // used to deploy to github page
-  plugins: [react(), svgr()],
-  css: {
-    postcss,
-  },
+  plugins: [react(), svgr(), tsconfigPaths()],
 });

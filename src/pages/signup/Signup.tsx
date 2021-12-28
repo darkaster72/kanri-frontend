@@ -1,6 +1,6 @@
 import { Button, Link, TextField } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
-import Logo from "../components/Logo";
+import Logo from "components/logo/Logo";
 
 const Signup = () => (
   <div className="h-screen w-full bg-white flex flex-col justify-center items-center">
@@ -18,7 +18,12 @@ const Signup = () => (
         <div className="uppercase font-thin">Or</div>
         <Button variant="outlined" fullWidth>Continue with Google</Button>
         <hr className="w-full my-2" />
-        <Link to="/login" component={RouterLink} underline="hover" color="black">
+        <Link
+          to="/login"
+          component={RouterLink}
+          underline="hover"
+          color="black"
+        >
           <p className="hover:underline font-thin text-accent-dark">
             Already have an account? Login
           </p>
