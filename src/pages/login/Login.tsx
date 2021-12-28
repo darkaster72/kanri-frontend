@@ -1,10 +1,10 @@
 import { Button, Link, TextField } from "@mui/material";
+import Logo from "components/logo/Logo";
 import { Formik } from "formik";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
-import Logo from "../components/Logo";
+import { loginUser } from "reducers/user/userSlice";
+import { useAppDispatch } from "redux/store";
 import * as yup from "yup";
-import { login, loginUser } from "../redux/reducers/user/userSlice";
-import { useAppDispatch } from "../redux/store";
 
 type FormValues = { email: string; password: string };
 
