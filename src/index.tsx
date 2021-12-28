@@ -3,10 +3,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import {
-  BrowserRouter as Router,
-  Navigate,
-  Route,
-  Routes,
+  BrowserRouter as Router, Route,
+  Routes
 } from "react-router-dom";
 import App from "./App";
 import "./index.css";
@@ -14,15 +12,8 @@ import ErrorBoundary from "./pages/ErrorBoundary";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import { selectCurrentUser } from "./redux/reducers/userSelector";
-import store, { useAppSelector } from "./redux/store";
+import store from "./redux/store";
 import { MaterialTheme } from "./styles/MaterialTheme";
-
-// const LoginOrRedirect = () => {
-//   const currentUser = useAppSelector(selectCurrentUser);
-
-//   return currentUser ? <Navigate to="" /> : <Login />;
-// };
 
 ReactDOM.render(
   <React.StrictMode>

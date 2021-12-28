@@ -1,5 +1,6 @@
 import { Button, TextField } from "@mui/material";
 import Header from "../components/Header";
+import hero from "../assets/hero.png";
 
 const Home = () => (
   <div className="h-full w-full bg-background">
@@ -23,10 +24,7 @@ const Home = () => (
         </div>
       </div>
       <div className="basis-4/6">
-        <img
-          src="https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/images/spirit/hero/6a3ccd8e5c9a0e8ebea4235d12da6b24/hero.png"
-          alt="illustration"
-        />
+        <img src={hero} alt="illustration" />
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-import { IUser } from "../modes/user";
+import { IUser } from "../models/user";
 import { selectCurrentUser } from "../redux/reducers/userSelector";
 import { logout } from "../redux/reducers/userSlice";
 import { AppDispatch, useAppDispatch, useAppSelector } from "../redux/store";
@@ -28,6 +28,7 @@ const Header = ({}: AppProps) => {
 };
 
 export default Header;
+
 const renderLoginOptions = () => (
   <div className="flex no-underline items-center gap-2">
     <Link to="login">
