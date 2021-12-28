@@ -1,9 +1,5 @@
-import {
-  createAsyncThunk,
-  createSlice,
-  PayloadAction
-} from "@reduxjs/toolkit";
-import { IUser } from "../../../models/user";
+import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { IUser } from "models/user";
 
 type UserState = {
   currentUser: IUser | null;
@@ -21,7 +17,6 @@ export const loginUser = createAsyncThunk(
     const response = await new Promise<IUser>((resolve) => {
       setTimeout(() => resolve({ email: user.email }), 100);
     });
-    // thunkApi.
     return response;
   }
 );
@@ -36,9 +31,6 @@ const userSlice = createSlice({
     loginError: (state, action: PayloadAction<Error>) => {
       state.error = action.payload;
     },
-    login: (state, action: PayloadAction<IUser>) => {
-      state.currentUser = action.payload;
-    },
     logout: (state) => {
       state.currentUser = null;
     },
@@ -51,6 +43,6 @@ const userSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { login, logout } = userSlice.actions;
+export const { logout } = userSlice.actions;
 
 export default userSlice.reducer;
