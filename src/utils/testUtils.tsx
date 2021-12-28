@@ -1,7 +1,7 @@
 import { render as rtlRender } from "@testing-library/react";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
-import userReducer from "../redux/reducers/user/userSlice";
+import userReducer from "reducers/user/userSlice";
 import React from "react";
 
 function render(
