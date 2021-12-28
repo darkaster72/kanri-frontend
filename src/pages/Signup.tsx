@@ -1,7 +1,6 @@
-import { Button, Link } from "@mui/material";
+import { Button, Link, TextField } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import Logo from "../components/Logo";
-import TextField from "../components/TextField";
 
 const Signup = () => (
   <div className="h-screen w-full bg-white flex flex-col justify-center items-center">

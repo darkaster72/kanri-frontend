@@ -3,7 +3,7 @@ import {
   createSlice,
   PayloadAction
 } from "@reduxjs/toolkit";
-import { IUser } from "../../modes/user";
+import { IUser } from "../../models/user";
 
 type UserState = {
   currentUser: IUser | null;
