@@ -1,8 +1,8 @@
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { IUser } from "../models/user";
-import { selectCurrentUser } from "../redux/reducers/userSelector";
-import { logout } from "../redux/reducers/userSlice";
+import { selectCurrentUser } from "../redux/reducers/user/userSelector";
+import { logout } from "../redux/reducers/user/userSlice";
 import { AppDispatch, useAppDispatch, useAppSelector } from "../redux/store";
 import Logo from "./Logo";
 

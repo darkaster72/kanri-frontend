@@ -3,7 +3,7 @@ import { Formik } from "formik";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import Logo from "../components/Logo";
 import * as yup from "yup";
-import { login, loginUser } from "../redux/reducers/userSlice";
+import { login, loginUser } from "../redux/reducers/user/userSlice";
 import { useAppDispatch } from "../redux/store";
 
 type FormValues = { email: string; password: string };

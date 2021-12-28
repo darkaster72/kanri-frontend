@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import logger from "redux-logger";
 import thunkMiddleware from "redux-thunk";
-import userReducer from "./reducers/userSlice";
+import userReducer from "./reducers/user/userSlice";
 
 const store = configureStore({
   reducer: {
