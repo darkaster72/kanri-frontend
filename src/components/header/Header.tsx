@@ -1,10 +1,10 @@
 import { Button } from "@mui/material";
+import Logo from "components/logo/Logo";
+import { IUser } from "models/user";
 import { Link } from "react-router-dom";
-import { IUser } from "../models/user";
-import { selectCurrentUser } from "../redux/reducers/user/userSelector";
-import { logout } from "../redux/reducers/user/userSlice";
-import { AppDispatch, useAppDispatch, useAppSelector } from "../redux/store";
-import Logo from "./Logo";
+import { selectCurrentUser } from "reducers/user/userSelector";
+import { logout } from "reducers/user/userSlice";
+import { AppDispatch, useAppDispatch, useAppSelector } from "redux/store";
 
 type AppProps = {};
 

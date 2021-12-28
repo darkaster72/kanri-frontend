@@ -10,8 +10,8 @@ import App from "./App";
 import "./index.css";
 import ErrorBoundary from "./pages/ErrorBoundary";
 import Home from "./pages/home/Home";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
+import Login from "./pages/login/Login";
+import Signup from "./pages/signup/Signup";
 import store from "./redux/store";
 import { MaterialTheme } from "./styles/MaterialTheme";
 

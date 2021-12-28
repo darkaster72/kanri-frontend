@@ -1,6 +1,6 @@
 import { Button, TextField } from "@mui/material";
-import Header from "../../components/Header";
-import hero from "../assets/hero.png";
+import Header from "components/header/Header";
+import hero from "assets/hero.png";
 
 const Home = () => (
   <div className="h-full w-full bg-background">
